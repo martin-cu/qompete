@@ -1,0 +1,421 @@
+<div class="h-100 journal">
+	<div class="journal-header">
+		<div class="d-flex">
+			<a href="/home"><i class="fa fa-chevron-left ml-3" style="font-size: 18px;color:black;"></i></a>
+			<div class="d-flex mx-auto">
+				<i class="fa fa-arrow-left"></i>
+				<div class="mx-3 d-flex"><div id="month">MAR</div><div id="year" class="ml-1">2021</div></div>
+				<i class="fa fa-arrow-right"></i>
+			</div>
+		</div>
+	</div>
+
+	<div class="calendar w-100">
+		<table class="table w-100" id="journal-calendar">
+			<thead>
+				<tr class="table-headers w-100">
+					<th class="text-muted">S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>TH</th>
+					<th>F</th>
+					<th class="text-muted">S</th>
+				</tr>
+			</thead>
+
+			<tr>
+				<td><div></div></td>
+				<td><div>1</div></td>
+				<td><div>2</div></td>
+				<td><div>3</div></td>
+				<td><div>4</div></td>
+				<td><div class="active">5</div></td>
+				<td><div>6</div></td>
+			</tr>
+
+			<tr>
+				<td><div class="">7</div></td>
+				<td><div>8</div></td>
+				<td><div>9</div></td>
+				<td><div>10</div></td>
+				<td><div>11</div></td>
+				<td><div>12</div></td>
+				<td><div>13</div></td>
+			</tr>
+
+			<tr>
+				<td><div>14</div></td>
+				<td><div>15</div></td>
+				<td><div>16</div></td>
+				<td><div>17</div></td>
+				<td><div>18</div></td>
+				<td><div>20</div></td>
+				<td><div>21</div></td>
+			</tr>
+
+			<tr>
+				<td><div>22</div></td>
+				<td><div>23</div></td>
+				<td><div>24</div></td>
+				<td><div>25</div></td>
+				<td><div>26</div></td>
+				<td><div>27</div></td>
+				<td><div>28</div></td>
+			</tr>
+
+			<tr>
+				<td><div>29</div></td>
+				<td><div>30</div></td>
+				<td><div>31</div></td>
+				<td><div></div></td>
+				<td><div></div></td>
+				<td><div></div></td>
+				<td><div></div></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="calendar-notes">
+		<div class="details">
+			<div>5 Mar</div>
+			<div>64/365</div>
+			<div>You're doing great</div>
+		</div>
+
+		<div class="tabs d-flex">
+			<div class="w-50 active diary">Diary</div>
+			<div class="w-50 reminders">Reminders</div>
+		</div>
+
+		<div class="cont" id="detail_cont1">
+			<div class="notes">
+				<div class="d-flex">
+					<div class="mx-2" style="margin-top: 3px; margin-bottom: 12px;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+							  <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+							  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+							  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+						</svg>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="content">
+							Notes
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="moods">
+				<div class="d-flex">
+					<div class="mx-2" style="margin-top: 5px; margin-bottom: 12px;">
+						<img src="../img/attitude.png" style="height: 22px; width: 20px;">
+					</div>
+					<div class="d-flex flex-column">
+						<div class="content">
+							Moods
+						</div>
+						<div class="content">
+							<table style="margin-left: -30px;" class="">
+							{{#grouped_each 5 mood}}
+							<tr>
+								
+								{{#each this}}
+								<td class="py-1">
+								<div class="d-block indiv_mood">
+									<div class="w-100 mx-auto text-center"><img src="{{#if this.img_url}}../img/{{this.img_url}}{{/if}}"></div>
+									<div class="text-center">{{this.mood_name}}</div>
+								</div>
+								</td>
+								{{/each}}
+							</tr>
+
+							{{/grouped_each}}
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="engk rtb-cont">
+				<div class="d-flex flex-column">
+					<div class="rose">
+						<div class="d-flex">
+							<div class="" style="margin-left: 5px;margin-right: 8px;margin-top: 4px; margin-bottom: 12px;">
+								<img src="../img/rose.png" style="height: 20px;width: 22px;">
+							</div>
+						</div>
+						<div class="d-flex flex-column">
+							<div class="content">
+								Rose
+							</div>
+							<div class="content">
+								<ul style="">
+									{{#each rose}}
+									<li>{{this.content}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="thorn">
+						<div class="d-flex">
+							<div class="mx-2" style="margin-top: 4px; margin-bottom: 12px;">
+								<img src="../img/floral-design.png" style="height: 18px;width: 18px;">
+							</div>
+						</div>
+						<div class="d-flex flex-column">
+							<div class="content">
+								Thorn
+							</div>
+							<div class="content">
+								<ul style="">
+									{{#each thorn}}
+									<li>{{this.content}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bud">
+						<div class="d-flex">
+							<div class="mx-2" style="margin-top: 3px; margin-bottom: 12px;">
+								<img src="../img/bud.png" style="height: 20px;width: 20px;">
+							</div>
+						</div>
+						<div class="d-flex flex-column">
+							<div class="content">
+								Bud
+							</div>
+							<div class="content">
+								<ul style="">
+									{{#each bud}}
+									<li>{{this.content}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hide cont" id="detail_cont2">
+			<div class="reminders_cont mx-2 mr-3 mt-2 mb-3">
+				<div class="ml-auto text-right">
+					<i class="pt-2 fa fa-plus" id="addReminder"></i>
+				</div>
+				<div class="content">
+					{{#if reminders}}
+					{{#each reminders}}
+					<div class="d-flex mb-2">
+						<div style="margin-top: 0px; padding-top: 5px;"><i class="fa fa-calendar" style="font-size: 20px;"></i></div>
+						<div class="d-flex w-100">
+							<div class="d-block">
+								<div class="ml-2" style="font-size: 20px;">{{this.title}}</div>
+								<div class="ml-2" style="font-size: 14px;">{{this.formattedTime}}</div>
+							</div>
+							<div class="ml-auto" style="font-size: 20px;">
+								<i class="fa fa-trash mt-2" data-href="/deleteReminder{{this.reminder_id}}"></i>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+					{{else}}
+					<div class="d-flex mb-2">
+						<div style="margin-top: 0px; padding-top: 5px;"><i class="fa fa-calendar" style="font-size: 20px;"></i></div>
+						<div class="d-flex w-100 text-muted">
+							<div class="d-block">
+								<div class="ml-2" style="font-size: 20px;">Title</div>
+								<div class="ml-2" style="font-size: 14px;">Time</div>
+							</div>
+							<div class="ml-auto" style="font-size: 20px;">
+								
+							</div>
+						</div>
+					</div>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form id="journalForm" action="/diary" method="post">
+<div class="journal-menu">
+	<div class="header d-flex">
+		<i class="menu-tab-close fa fa-chevron-left ml-3 mt-2" style="font-size: 18px;color:black;" onclick="clearTabs();"></i>
+		<div class="mx-auto text-center" style="align-content: center;"><input id="date" class="mx-auto" type="date" name="date" value="2021-03-05"></div>
+		<button onclick="consolidateForm()" type="button" class="mr-2 px-2" style="width: max-content; background-color: transparent; outline:none;
+		border: none; overflow: hidden;padding:0px;margin:0px;"><i class="fa fa-check"></i></button>
+	</div>
+
+	<div class="menu-tabs flex-column">
+		<div class="d-flex">
+			<div class="w-50 note_tab">
+				<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+					  <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+					  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+					  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+				</svg>
+			</div>
+			<div class="w-50 mood_tab"><img src="../img/attitude.png" style="height: 28px; width: 26px;"></div>
+		</div>
+		<div class="d-flex" style="margin-top: 0.1px;">
+			<div class="w-33 rose_tab"><img src="../img/rose.png" style="height: 26px;width: 28px; "></div>
+			<div class="w-33 thorn_tab"><img src="../img/floral-design.png" style="height: 24px;width: 24px;"></div>
+			<div class="w-33 bud_tab"><img src="../img/bud.png" style="height: 28px;width: 28px;"></div>
+		</div>
+	</div>
+
+	<div class="menu-body mt-4">
+		
+		<div class="menu-cont h-100">
+			<div class="mx-4 note_tab hide">
+				<div class="d-flex">
+					<div class="mr-3">
+						<i class="fa fa-pencil mt-1" aria-hidden="true" style="font-size: 24px; transform: rotate(98deg);"></i>
+					</div>
+					<div id="chat_ta_cont" class="ta-frame mr-auto w-100" style="height: 156px;">
+						<textarea id="chat_ta" class="chat-area" rows=5 value=""></textarea>	
+					</div>
+					
+				</div>				
+			</div>
+
+			<table class="hide table mood_tab">
+				{{#each moodList}}
+					<tr><td><input type="checkbox" name="moodList" id="mood{{this.id}}" value="{{this.id}}"><label for="mood{{this.id}}">{{this.mood_name}}</label></td></tr>
+				{{/each}}
+			</table>
+
+			<div class="hide ml-1 mr-4 rose_tab">
+				<i class="fa fa-plus-circle"></i>
+				<div class="instructions">
+					<div>Rose</div>
+					<div>a highlight, success, or something positive that happened</div>
+				</div>
+				<ul>
+
+				</ul>
+			</div>
+
+			<div class="hide ml-1 mr-4 thorn_tab">
+				<i class="fa fa-plus-circle"></i>
+				<div class="instructions">
+					<div>Thorn</div>
+					<div>a challenge or something you can use more support with</div>
+				</div>
+				<ul>
+
+				</ul>
+			</div>
+
+			<div class="hide ml-1 mr-4 bud_tab">
+				<i class="fa fa-plus-circle"></i>
+				<div class="instructions">
+					<div>Bud</div>
+					<div>new ideas or something you're looking forward to knowing or understanding more</div>
+				</div>
+				<ul>
+
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+</form>
+
+<form action="/reminder" method="post" id="reminderForm">
+	<div class="reminder-menu">
+		<div class="header d-flex">
+			<i class="menu-tab-close fa fa-chevron-left ml-3 mt-2" style="font-size: 18px;color:black;" onclick=""></i>
+			<div class="mx-auto text-center" style="align-content: center;">Reminders</div>
+			<button type="submit" class="mr-2 px-2" style="width: max-content; background-color: transparent; outline:none;
+			border: none; overflow: hidden;padding:0px;margin:0px;"><i class="fa fa-check"></i></button>
+		</div>
+
+		<div class="mx-3 mt-5" style="font-size: 20px;">
+
+			<div class="d-flex reminder-cont" style="text-align: left !important;">
+				<input id="title" name="title" type="text"  style="text-align: left !important;" class="reminder-inp w-100" value="" placeholder="Title...">
+			</div>
+
+			<div class="d-flex reminder-cont mt-5">
+				<label for="date1" class="mr-auto">Date</label>
+				<input id="date1" name="date1" class="reminder-inp w-100" type="date" name="date" value="2021-03-05" readonly>
+			</div>
+			<div class="d-flex reminder-cont">
+				<label for="timepicker" class="mr-auto">Time</label>
+				<input type="text" name="timepicker" id="timepicker" name="timepicker-one" class="w-100 reminder-inp timepicker">
+			</div>
+			<div class="d-flex reminder-cont w-100">
+				<label for="repeat" class="mt-3 mr-auto">Repeat</label>
+				<select class="selectpicker" id="repeat" name="repeat">
+				  <option selected value="Once">Once</option>
+						<option value="Daily">Daily</option>
+						<option value="Weekly">Weekly</option>
+						<option value="Monthly">Monthly</option>
+						<option value="Yearly">Yearly</option>
+				</select>
+			</div>
+
+
+
+			<div class="d-flex reminder-cont mt-5">
+				<label for="category" class="mt-3 mr-auto">Category</label>
+				<select class="selectpicker" id="category" name="category">
+				  	<option selected value="Personal">Personal</option>
+					<option value="Work">Work</option>
+				</select>
+			</div>
+			<div class="d-flex reminder-cont">
+				<label for="alert" class="mt-3 mr-auto">Alert</label>
+				<select class="selectpicker" id="alert" name="alert">
+			  		<option selected value="Once">None</option>
+					<option value="0">At time of event</option>
+					<option value="5m">5 minutes before</option>
+					<option value="10m">10 minutes before</option>
+					<option value="30m">30 minutes before</option>
+					<option value="1h">1 hour before</option>
+					<option value="2h">2 hours before</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div class="my-1 pt-2 hide w-100" id="keyboard" style="position: absolute; left:0px; top: calc(100% - 153px);">
+	{{> keyboard}}
+</div>
+<script type="text/javascript" src="../js/wickedpicker.js"></script>
+<script type="text/javascript">
+	var type = 'journal';
+
+	var options = { 
+		now: "12:00", 
+		twentyFour: true,
+		upArrow: 'wickedpicker__controls__control-up', 
+		downArrow: 'wickedpicker__controls__control-down',
+		close: 'wickedpicker__close',
+		hoverState: 'hover-state',
+		title: 'Time',
+		showSeconds: false,
+		secondsInterval: 1,
+		minutesInterval: 15,
+		beforeShow: null,
+		show: null,
+		clearable: false,
+	};
+	$('.timepicker').wickedpicker(options);
+
+	{{#if marked}}
+	var marked = [{{marked}}];
+	{{else}}
+	var marked = '';
+	{{/if}}
+</script>
+
+<script src="../js/journal_menu.js"></script>
+<script src="../js/chat.js"></script>

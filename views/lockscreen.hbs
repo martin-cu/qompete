@@ -1,0 +1,131 @@
+<style type="text/css">
+
+#page-container {
+  width: 100%;
+  height: 100%;
+}
+
+#dialog-container {
+  /** border: dashed 2px pink; **/
+  width: 350px;
+  min-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.dialog-box {
+  position: relative;
+  min-height: 80px;
+  max-height: 180px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+@keyframes pop {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dialog-box .header {
+  height: 25px;
+  position: relative;
+  color: black;
+}
+
+.background-blur {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+}
+
+.left {
+  float: left;
+  text-align: left;
+  width: content-max;
+  padding: 3px 0 0 10px;
+}
+
+.right {
+  float: right;
+  text-align: right;
+  width: content-max;
+  padding: 3px 10px 0 0;
+}
+
+.contents {
+  z-index: 100;
+  position: inherit;
+  font-size: 1.05em;
+}
+
+.main-content {
+  padding: 8px 20px 10px 10px;
+  height: content-max;
+}
+
+#footer-text {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+</style>
+
+<div id="rem" class="w-100 h-100" style="background-color: #212529;position: absolute; top:0;left:0;z-index: 9999;">
+	
+</div>
+
+<div class="w-100 h-100" style="background: url('../img/wallpaper.jpg');background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */;opacity: 1;
+  animation: pop 0.3s 1s 1; ">
+	<div class="text-center w-100 text-dark" style="margin-top: 9.5rem;">
+		<h1 style="font-size: 54px;" class="text-dark">{{time}}</h1>
+		<h4>Friday, March 5</h4>
+	</div>
+
+	<!-- <div class="mx-1 bg-dark" style="border-radius: 20px;">
+		<div class="d-flex">
+			<img src="">
+			<div>eTALA</div>
+		</div>
+	</div> -->
+	<div class="dialog-box mx-2 mt-4" data-href="/chat">
+    <div class="background-blur"></div>
+    <div class="header">
+      <div class="background-blur"></div>
+      <div class="contents">
+      <div class="left">
+        <img src="../img/notif_logo.png" style="width: 24px; height: 24px; margin-top: -3px;"> eTALA
+      </div>
+      <div class="right">
+        Sun 5:33 pm
+      </div>
+      </div>
+    </div>
+    <div class="contents main-content">
+      <strong>
+        Charlie is sending love
+      </strong>
+      <br/>
+      Charlie sent you a message.
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	setTimeout(function() {
+		$('#rem').remove();
+	}, 1000)
+</script>

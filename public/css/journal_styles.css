@@ -1,0 +1,416 @@
+/*.journal {
+	background: transparent url('../img/catpaws.png');
+	background-size: 175px;
+	background-repeat: repeat;
+	background-origin: padding-box;
+	background-position: 0px 150px;
+	width: 100%;
+}
+*/
+.cont > div, .calendar table td div, .menu-tabs div div,
+.fa.fa-check, .menu-tab-close, .mood_tab tr,
+.fa.fa-arrow-left, .fa.fa-arrow-right {
+	cursor: pointer;
+}
+
+.journal::before {
+	content: "";
+	background: transparent url('../img/catpaws.png');
+	width: 100%;
+	height:253px;
+	background-size: 175px;
+	background-repeat: repeat;
+	position: absolute;
+	top: 108px;
+	left: -15px;
+	opacity: 0.15;
+	z-index: -1;
+}
+
+.calendar table tbody{
+	background: transparent;
+	background-size: 175px;
+	background-repeat: repeat;
+	background-position: 0px 0px;
+}
+
+.journal-menu-cont {
+	position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; 
+}
+
+.journal-menu, .reminder-menu {
+	/*background-image: repeating-linear-gradient(#ededed, #f4f4f4, #ffffff, #f4f4f4, #ededed);*/
+	background-color: #f3f4f6;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	max-width: 391px;
+	top: 0px;
+	right: -100%;
+	transition: 0.6s;
+}
+
+.journal-menu .chat-area {
+	background-color: white !important;
+	border: #585858 solid 0.5px !important;
+}
+
+.menu-body {
+	height: calc(100% - 123.1px - 40.8px);
+	overflow-y: auto;
+}
+
+.journal-menu .header, .reminder-menu .header {
+	border-bottom: none !important;
+}
+
+.tabs div {
+	background-color: #c6c6c6;
+	opacity: 0.3;
+}
+
+.tabs .active {
+	background-color: #d3d5d8 !important;
+	opacity: 1 !important;
+}
+
+.menu-tabs {
+	width: 100%;
+	display: flex;
+	font-size: 18px;
+	text-align: center;
+	margin: 0px auto;
+}
+
+.menu-tabs div div {
+	padding: 15px 0px;
+	border: solid #585858 1px;
+	border-radius: 4px;
+}
+
+.menu-tabs div div:not(:last-child) {
+	margin-right: 0.1px;
+}
+
+.w-33 {
+	width: 33.33%;
+}
+
+.slide-in {
+	right: 0px !important;
+	transition: 0.6s;
+}
+
+.fade-out {
+	opacity: 0.3;
+}
+
+.menu-cont .fa-plus-circle {
+	position: absolute;
+	top: calc(100% - 60px);
+	right: 30px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+.rose_tab .instructions, .thorn_tab .instructions, .bud_tab .instructions {
+	text-align: center;
+	margin: 0px auto;
+	width: 60%;
+}
+
+.rose_tab .instructions div:nth-child(1), .thorn_tab .instructions div:nth-child(1)
+, .bud_tab .instructions div:nth-child(1) {
+	
+}
+
+.rose_tab .instructions div:nth-child(2), .thorn_tab .instructions div:nth-child(2)
+, .bud_tab .instructions div:nth-child(2) {
+	font-size: 14px;
+	color: gray;
+	margin-bottom: 10px;
+}
+
+.rose_tab li, .thorn_tab li, .bud_tab li {
+	font-size: 20px;
+}
+
+.reminder-inp, .bs3 {
+	text-align: right !important;
+	margin-left: 0px !important;
+	padding: 0.35rem 0.5rem !important;
+	background-color: transparent !important;
+	border: none !important;
+	outline: none !important;
+}
+
+.bs3 {
+	width: 130px !important;
+}
+
+.btn-default {
+	text-align: right !important;
+	font-size: 18px !important;
+	width: 130px !important;
+	background-color: transparent !important;
+	border: none !important;
+	outline: none !important;
+}
+
+select {
+	text-align: right !important;
+}
+
+.reminder-cont {
+	border: none !important;
+	outline: none !important;
+	font-weight: 400 !important;
+	text-align: right !important;
+	margin-left: 0px !important;
+	background-color: gainsboro !important;
+	border-radius: 5px;
+	padding: 0.15rem 0.5rem !important;
+	margin-top: 2px;
+}
+
+.reminder-cont label {
+	margin-left: .5rem !important;
+	margin-top: 8px;
+	font-size: 16px;
+	opacity: 0.7;
+}
+
+.journal-header, .journal-menu .header, .reminder-menu .header {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 2rem;
+	border-bottom: solid black 0.8px;
+	padding-bottom: 0.7rem;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 9px;
+}
+
+.table-headers th {
+	width: 14.28%;
+	font-size: 10px;
+}
+
+.calendar td {
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.calendar td, th {
+	padding: 0.6rem 0.75rem !important;
+	padding-bottom: 0.9rem !important;
+	text-align: center;
+	border-bottom: solid 1px #b1b4b8 !important;
+	border-top: none !important;
+}
+
+.calendar td div {
+	width: 30px;
+	height: 30px;
+	margin: 0px auto;
+	vertical-align: middle;
+}
+
+.calendar .active {
+	background-color: black;
+	border: solid black 0.3px;
+	color: white;
+	border-radius: 50%;
+}
+
+.calendar-notes {
+	height: calc(100% - 360px);
+	margin-top: 20px;
+	border-top: solid #c7cbcf 1px;
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
+	background-color: #f3f4f6;
+}
+
+.calendar-notes .details {
+	font-size: 13.5px;
+	margin: 6px 8px;
+}
+
+.dot {
+	margin-top: 8px !important;
+	width: 8px !important;
+	height: 8px !important;
+	border-radius: 50%;
+	background-color: #FF8B42;
+	content: '';
+}
+
+.calendar-notes .tabs {
+	text-align: center;
+	margin-top: 8px;
+	border-top: solid black 1px;
+	border-bottom: solid black 1px;
+}
+
+.calendar-notes .tabs div {
+	font-size: 20px;
+	padding: 4px 0px;
+}
+
+.calendar-notes .tabs div:nth-child(1) {
+	border-right: black solid 1px;
+}
+.calendar-notes .tabs div:nth-child(2) {
+	border-left: black solid 1px;
+}
+
+.tabs {
+	box-shadow: 0 0 20px #eee;
+    border-radius: 2px;
+    cursor: pointer;
+}
+         
+/*.tabs .active {
+	transition: 0.5s;
+	background-size: 200% auto;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+}
+
+.active:hover {
+	background-position: right center; /* change the direction of the change here 
+   text-decoration: none;
+}*/
+
+.calendar-notes .cont {
+	height: 265px;
+	overflow-y: auto;
+	font-size: 18px;
+	margin-top: 0px;
+}
+
+.rtb-cont > div > div:nth-child(2) {
+	border-top: solid gainsboro 1px;
+	border-bottom: solid gainsboro 1px;
+}
+
+.rose, .thorn, .bud {
+	display: flex;
+	flex:wrap;
+}
+
+.cont .notes, .cont .moods, .cont .bud, .cont .rose, .cont .thorn {
+	min-height: 44px;
+}
+
+.cont .content:nth-child(1) {
+	margin-top: 6px;
+}
+
+.cont .content:last-child {
+	margin-bottom: 8px;
+}
+
+.cont .content {
+	margin-bottom: 4px;
+}
+
+.content ul {
+	margin-bottom:0px;
+	margin-left: -45px;
+}
+
+.content li {
+	font-size: 16px;
+}
+
+.tab_ta {
+	height: 36px;
+	margin-top: 5px;
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+.indiv_mood {
+	margin-right: 5px;
+	font-size: 16px;
+}
+
+.indiv_mood img {
+	width: 34px;
+	height: 34px;
+	margin: 0px auto !important;
+}
+
+#date {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: black;
+	text-align: center;
+	align-content: center;
+	margin: 0px auto;
+	padding: 0px;
+	margin-left: 20px;
+	font-weight: 700;
+}
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.mood_tab input {
+	position: absolute;
+	left: -200vw;
+}
+
+.mood_tab tr.active {
+	background-color: #c6c6c6 !important;
+}
+
+.calendar-notes .cont .notes, .menu-tabs .note_tab {
+	background-color: #cad5d7;
+}
+
+.calendar-notes .cont .moods, .menu-tabs .mood_tab {
+	background-color: #ebdebf;
+}
+
+.calendar-notes .cont .engk {
+	background-color: #1884ac;
+}
+
+.calendar-notes .cont .rose, .menu-tabs .rose_tab {
+	background-color: #fdece3;
+}
+
+.calendar-notes .cont .thorn, .menu-tabs .thorn_tab {
+	background-color: #e9f0f8;
+}
+
+.calendar-notes .cont .bud, .menu-tabs .bud_tab {
+	background-color: #ecf4e0;
+}
+
+.menu-tabs div div {
+	opacity: 0.3;
+}
+
+.menu-tabs div .active {
+	opacity: 1;
+}

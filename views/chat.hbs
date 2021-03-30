@@ -1,0 +1,95 @@
+<div class="chat-box d-flex flex-column">
+	<div class="head">
+		<div class="d-flex h-100 w-100">
+			<a href="/home"><i class="fa fa-chevron-left m-3" style="padding-top: 2px; font-size: 18px;color:black;"></i></a>
+			
+			<div class="d-flex">
+				<div class="chat-user">
+					<img class="rounded-pic" src="../img/catPic.jpg">
+				</div>
+				<div class="font-weight-bold ml-2" style="margin-top: 10px; font-size: 20px;">
+					Charlie the cat
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="chat-body-cont d-flex flex-column">
+		<div class="chat-body px-3 my-2 w-100">
+			<div class="chat-user-lg mt-3 mb-2 mx-auto w-100">
+				<div class="justify-content-center mx-auto w-100 ">
+					<img class="rounded-pic-lg" src="../img/catPic.jpg">	
+				</div>
+				
+				<div class="text-center font-weight-bold" style="font-size: 18px;">
+					Charlie the cat
+				</div>
+				<div class="text-center text-muted" style="font-size: 12px;">
+					Your friendly and caring cat
+				</div>
+			</div>
+
+			<div id="msg-cont" class="msg-cont">
+				<div class="cat message d-flex">
+					<div class="chat-user-sm mr-2">
+						<img class="rounded-pic-sm" src="../img/catPic.jpg">
+					</div>
+						
+					<div class="d-block" style="">
+						<div class="msg-box cat">
+							Welcome to eTALA Issha!
+						</div>
+						<div class="msg-box cat">
+							I'll be your personal friend and assistant in navigating through the app
+						</div>
+					</div>
+				</div>
+
+				<div class="mine message d-flex flex-row-reverse mt-2">
+					<div class="chat-user-sm ml-2">
+						<img src="../img/girl-sad.png" style="height: 26px; width:26px;background-color: white;border: black solid 1px;border-radius: 50%;">
+					</div>
+						
+					<div class="d-block">
+						<div class="msg-box mine text-right">
+							Okay sounds good
+						</div>
+					</div>
+				</div>
+
+				<div class="cat message d-flex mt-2">
+					<div class="chat-user-sm mr-2">
+						<img class="rounded-pic-sm" src="../img/catPic.jpg">
+					</div>
+						
+					<div class="d-block" style="">
+						<div class="msg-box cat">
+							How's your day like so far?
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cta" class="chat-type-area mt-3 pt-2">
+			<div class="d-flex mx-3 my-1 pb-1">
+				<div id="chat_ta_cont" class="ta-frame mr-auto w-100" style="height: 36px;">
+					<textarea id="chat_ta" class="chat-area" rows=1 value="" style="font-size: 15px;"></textarea>
+				</div>
+				<div id="" class="pb-2 mr-1" style="margin-top: auto;">
+					<i id="submit_btn" class="disabled icon-pointer fa fa-paper-plane" style="transform: rotate(30deg);"></i>
+				</div>
+			</div>
+
+			<div class="my-1 pt-2 hide" id="keyboard">
+				{{> keyboard}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var type = 'chat';
+	var chatstart = false;
+</script>
+
+<script src="../js/chat.js"></script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>APP NAME</title>
+
+
+
+    <link rel="stylesheet" href="../css/Accordion.css">
+    <script src="../js/actions.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee">
+    <link rel="stylesheet" href="../fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Accordion.css">
+    <link rel="stylesheet" href="../css/Google-Style-Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+    <link rel="stylesheet" href="../css/wickedpicker.css">
+
+    <link rel="stylesheet" href="../css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="../css/menu-cinel-1.css">
+    <link rel="stylesheet" href="../css/menu-cinel.css">
+    <link rel="stylesheet" href="../css/Pretty-Product-List.css">
+    <link rel="stylesheet" href="../css/Profile-Card.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cat_styles.css">
+    <link rel="stylesheet" href="../css/keyboard_style.css">
+    <link rel="stylesheet" href="../css/journal_styles.css">
+</head>
+
+<body style="height: 100vh;">
+    {{> navbar}}
+    <div class="middle">
+        {{> app_options}}
+        {{{body}}}
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/keyboard.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var date = new Date();
+            var time = date.getHours();
+            var minutes = date.getMinutes();
+            var mt = '';
+            if (parseInt(time) >= 13) {
+                mt = 'PM';
+                time -= 12;
+            }
+            else {
+                mt = 'AM';
+            }
+            if (minutes < 10) {
+                minutes = '0'+minutes.toString();
+            }
+
+            var timestamp = time.toString()+':'+minutes.toString()+' '+mt;
+            $('#clock').html(timestamp);
+
+            setInterval(function() {
+                var date = new Date();
+                var time = date.getHours();
+                var minutes = date.getMinutes();
+                var mt = '';
+
+                if (parseInt(time) >= 13) {
+                    mt = 'PM';
+                    time -= 12;
+                }
+                else {
+                    mt = 'AM';
+                }
+
+                if (minutes < 10) {
+                    minutes = '0'+minutes.toString();
+                }
+
+                var timestamp = time.toString()+':'+minutes.toString()+' '+mt;
+                $('#clock').html(timestamp);
+            }, 10000);
+
+            $('* [data-href]').on('click',function (event) {
+                window.location = $(this).attr('data-href');
+            });
+        });
+    </script>
+</body>
+
+</html>
